@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coragem Progamer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-container">
+        <img class="FOTO1" src="https://media.tenor.com/N4ThKwtb6xYAAAAd/thumbs-up-courage.gif" alt="Coragem">
+        <h1 class="Coragem">CORAGEM THE PROGAMER</h1>
+    </header>
+
+    <main class="buttons-container">
+        <!-- Botão 1: Sobre Mim -->
+        <div class="section">
+            <button class="toggle-btn" onclick="toggleContent('sobre-mim')">Sobre Mim</button>
+            <div id="sobre-mim" class="content-box">
+                <img class="fotosobremim" src="https://i.pinimg.com/originals/c4/d2/5d/c4d25d156675933ab63679f4952fd222.gif" alt="">
+                <p class="textosobremim">Depois de tanta coisa estranha acontecendo em lugar nenhum coragem decide se dedicar ao maximo a progamar um sistema de defesa e detecção usando o computador.</p>
+            </div>
+        </div>
+
+        <!-- Botão 2: Minhas Descobertas -->
+        <div class="section">
+            <button class="toggle-btn" onclick="toggleContent('descobertas')">Minhas Descobertas</button>
+            <div id="descobertas" class="content-box">
+                <p>Aqui estão as descobertas tecnológicas de Coragem para proteger sua fazenda.</p>
+                <div class="image-placeholder">
+                    <!-- Espaço para imagem -->
+                    <p>[Espaço para Imagem]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botão 3: Entre em Contato -->
+        <div class="section">
+            <button class="toggle-btn" onclick="toggleContent('contato')">Entre em Contato</button>
+            <div id="contato" class="content-box">
+                <p>Telefone de Lugar Nenhum: blablabla</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                // Fecha outros conteúdos abertos (opcional)
+                document.querySelectorAll('.content-box').forEach(box => box.style.display = 'none');
+                content.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
